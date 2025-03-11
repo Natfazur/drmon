@@ -119,17 +119,17 @@ function buttons()
     if yPos == 8 then
       local cFlow = fluxgate.getSignalLowFlow()
       if xPos >= 2 and xPos <= 4 then
-        cFlow = cFlow-1000
-      elseif xPos >= 6 and xPos <= 9 then
         cFlow = cFlow-10000
-      elseif xPos >= 10 and xPos <= 12 then
+      elseif xPos >= 6 and xPos <= 9 then
         cFlow = cFlow-100000
+      elseif xPos >= 10 and xPos <= 12 then
+        cFlow = cFlow-1000000
       elseif xPos >= 17 and xPos <= 19 then
-        cFlow = cFlow+100000
+        cFlow = cFlow+1000000
       elseif xPos >= 21 and xPos <= 23 then
-        cFlow = cFlow+10000
+        cFlow = cFlow+100000
       elseif xPos >= 25 and xPos <= 27 then
-        cFlow = cFlow+1000
+        cFlow = cFlow+10000
       end
       fluxgate.setSignalLowFlow(cFlow)
     end
